@@ -1,0 +1,31 @@
+#!/bin/bash
+
+MYSQL_VERSION="10.3.25"
+MYSQL_LIBRARIES=" -L/usr/lib/arm-linux-gnueabihf/ -lmariadb "
+MYSQL_INCLUDEDIR=" -I/usr/include/mariadb -I/usr/include/mariadb/mysql "
+
+case $1 in
+	--version)
+		echo ${MYSQL_VERSION}
+		;;
+
+	--libs)
+		echo ${MYSQL_LIBRARIES}
+		;;
+
+	--libs_r)
+		echo ${MYSQL_LIBRARIES}
+		;;
+	
+	--include)
+		echo ${MYSQL_INCLUDEDIR}
+		;;
+	*)
+		echo "usage: mysql_config [--version | --libs | --libs_r | --include"
+		echo 
+		echo "MYSQL_VERSION    ${MYSQL_VERSION}"
+		echo "MYSQL_INCLUDEDIR ${MYSQL_INCLUDEDIR}"
+		echo "MYSQL_LIBRARIES  ${MYSQL_LIBRARIES}"
+		;;
+esac
+
