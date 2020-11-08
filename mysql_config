@@ -6,7 +6,7 @@ MYSQL_VERSION="10.3.25"
 # This is for libraries
 MYSQL_LIBRARIES=" -L/usr/lib/arm-linux-gnueabihf/ -lmariadb "
 # This is for includes
-MYSQL_INCLUDEDIR=" -I/usr/include/mariadb -I/usr/include/mariadb/mysql "
+MYSQL_INCLUDEDIR=" -I=/usr/include/mariadb -I=/usr/include/mariadb/mysql "
 
 case $1 in
 	--version)
